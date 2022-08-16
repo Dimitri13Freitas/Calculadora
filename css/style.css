@@ -29,7 +29,7 @@ body {
 
 /* Operação */
 .inputCalc {
-  min-height: 111px;
+  min-height: 115px;
   color: var(--cor-font);
   width:100%;
   text-align: right;
@@ -40,6 +40,8 @@ body {
 }
 .inputCalc div {
   margin: 30px 30px 15px 30px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .inputCalc p {
   font-size: 1.01rem;
@@ -61,7 +63,6 @@ body {
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 0 0 15px 15px;
 }
-
 .btnsCalc div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -76,6 +77,9 @@ body {
 .btnsCalc button:nth-child(16) {
   grid-area: 4 / 4 / 6 / 4;
   height: 100% !important;
+}
+.btnsCalc button:last-child::after {
+  content: '.';
 }
 .btnsCalc button {
   width: 100%;
@@ -94,6 +98,7 @@ body {
   width:20px;
 }
 
+/* Animações */
 
 
 
