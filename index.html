@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caluladora</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="inputCalc">
+      <div class="calculo">
+        <p></p>
+        <h1></h1>
+      </div>
+    </div>
+    <div class="btnsCalc">
+      <div>
+        <button class="funcoes jsLimpaTudo" onclick="apagaTudo()"><img src="img/clean.svg" alt=""></button>
+        <button class="funcoes jsOperador" alt="/"><img src="img/divisao.svg" alt=" / "></button>
+        <button class="funcoes jsOperador"><img src="img/multiplicacao.svg" alt=" * "></button>
+        <button class="funcoes jsApaga"><img src="img/apagar.svg" alt=""></button>
+        <button data-numero>9</button>
+        <button data-numero>8</button>
+        <button data-numero>7</button>
+        <button class="funcoes jsOperador"><img src="img/subtracao.svg" alt=" - "></button>
+        <button data-numero>4</button>
+        <button data-numero>5</button>
+        <button data-numero>6</button>
+        <button class="funcoes jsOperador"><img src="img/adicao.svg" alt=" + "></button>
+        <button data-numero>1</button>
+        <button data-numero>2</button>
+        <button data-numero>3</button>
+        <button class="funcoes" onclick="resultado()"><img src="img/igual.svg" alt=""></button>
+        <button class="funcoes jsOperador"><img src="img/porcentagem.svg" alt=""></button>
+        <button data-numero>0</button>
+        <button data-numero class="funcoes">.</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

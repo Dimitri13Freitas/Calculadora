@@ -1,0 +1,102 @@
+/* Geral */
+* {
+  margin:0;
+  padding:0;
+}
+body {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  background-image: url("https://images.unsplash.com/photo-1566738780863-f9608f88f3a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* Cores */
+:root {
+  --cor-font:#F7FCFF;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+  margin:0 auto;
+  margin-top:50px;
+}
+
+/* Operação */
+.inputCalc {
+  min-height: 111px;
+  color: var(--cor-font);
+  width:100%;
+  text-align: right;
+  background: rgba( 255, 255, 255, 0.4 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 15px 15px 0 0;
+}
+.inputCalc div {
+  margin: 30px 30px 15px 30px;
+}
+.inputCalc p {
+  font-size: 1.01rem;
+
+  margin-bottom: 5px;
+}
+.inputCalc h1 {
+  font-size: 2.2rem;
+}
+
+/* Operações e Numeros */
+.btnsCalc::selection {
+  user-select: none;
+}
+.btnsCalc {
+  width: 100%;
+  background: rgba( 255, 255, 255, 0.55 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 0 0 15px 15px;
+}
+
+.btnsCalc div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin:15px;
+  gap:4px;
+}
+.btnsCalc button.funcoes {
+  background: rgba( 255, 255, 255, 0.25 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+}
+.btnsCalc button:nth-child(16) {
+  grid-area: 4 / 4 / 6 / 4;
+  height: 100% !important;
+}
+.btnsCalc button {
+  width: 100%;
+  max-width:74px;
+  height: 55px;
+  display:block;
+  font-size: 24px;
+  border:none;
+  color:var(--cor-font);
+  background: rgba( 255, 255, 255, 0.5 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  cursor:pointer;
+}
+.btnsCalc button img {
+  width:20px;
+}
+
+
+
+
+
+
+
