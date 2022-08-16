@@ -16,15 +16,9 @@ digitaCalculo();
 
 // Digita operação
 function digitaOperacao() {
-  operadores.forEach((e) => {
+  operadores.forEach((e, index) => {
     e.addEventListener('click', () => {
       calculo.innerHTML += e.getAttribute('value');
-      
-      // if(calculo.innerText.includes('.')) {
-      //   .setAttribute('value', '');
-      // }else {
-
-      // }
     });
   });
 };
@@ -38,7 +32,7 @@ function apagaTudo() {
 
 function apaga() {
   let apaga = calculo.innerHTML;
-  calculo.innerHTML = apaga.substring(0, apaga.length -1);
+  calculo.innerHTML = apaga.substring(0, apaga.length -1); // slice tbm funciona novideo do mano seila 8==D
 };
 
 // Resultado
@@ -54,8 +48,10 @@ function resultadoFinal() {
   calculo.innerHTML += ' =';
 };
 
-// Correção: mais de um operador
-function correcaoOperador() {
-
-  
-};
+function porcentagem() {
+  let teste = 0
+  teste = calculo.innerHTML; 
+  console.log(teste);
+  teste = `0.${teste} * `
+  calculo.innerHTML = teste
+}
