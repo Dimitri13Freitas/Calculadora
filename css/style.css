@@ -32,7 +32,7 @@ body {
 
 /* Glassmorphism */
 .bgEffect {
-  display: inline-block;
+  display: block;
   color:#1F3E5A;
   transform: rotate(-90deg);
   position:absolute;
@@ -71,7 +71,7 @@ body {
 
 /* Operação */
 .inputCalc {
-  min-height: 115px;
+  min-height: 118px;
   color: var(--cor-font);
   width:100%;
   text-align: right;
@@ -86,12 +86,11 @@ body {
   word-break: break-all;
 }
 .inputCalc p {
-  font-size: 1.01rem;
-
+  font-size: 1.05rem;
   margin-bottom: 5px;
 }
 .inputCalc h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 
 /* Operações e Numeros */
@@ -179,7 +178,7 @@ body {
 }
 
 /* Responsivo */
-@media (max-width:500px) {
+@media (max-width:400px) {
   .btnChangeMode {
   margin:20px 20px 0 0;
   }
