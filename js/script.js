@@ -16,7 +16,7 @@ digitaCalculo();
 
 // Digita operação
 function digitaOperacao() {
-  operadores.forEach((e, index) => {
+  operadores.forEach((e) => {
     e.addEventListener('click', () => {
       calculo.innerHTML += e.getAttribute('value');
     });
@@ -52,7 +52,13 @@ function porcentagem() {
   let teste = 0
   teste = calculo.innerHTML; 
   console.log(teste);
-  teste = `0.${teste} * `
+  teste = `0.${teste} * `;
   calculo.innerHTML = teste
 }
 
+// Troca de tema
+function changeMode() {
+  const btn = document.querySelector('.btnChangeMode');
+  btn.classList.toggle('ativo');
+  document.documentElement.classList.toggle('changeMode');
+}

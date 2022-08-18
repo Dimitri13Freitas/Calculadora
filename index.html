@@ -9,13 +9,17 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
-  <div class="bgEffect"></div>
+  <div class="btnContainer">
+    <div class="btnChangeMode" onclick="changeMode()"></div>
+  </div>
   <div class="container">
+    <div class="bgEffect">Glassmorphism</div>
+    <div class="bgEffect">Glassmorphism</div>
     <div class="inputCalc">
       <div class="calculo">
         <p></p>
@@ -24,31 +28,28 @@
     </div>
     <div class="btnsCalc">
       <div>
-        <button class="funcoes jsLimpaTudo" onclick="apagaTudo()"><img src="img/clean.svg"></button>
-        <button class="funcoes jsOperador" value=" / "><img src="img/divisao.svg"></button>
-        <button class="funcoes jsOperador" value=" * "><img src="img/multiplicacao.svg"></button>
-        <button class="funcoes jsApaga" onclick="apaga()"><img src="img/delete.svg"></button>
+        <button class="funcoes jsLimpaTudo" onclick="apagaTudo()"><img src="img/assets/clean.svg"></button>
+        <button class="funcoes jsOperador" value=" / "><img src="img/assets/divisao.svg"></button>
+        <button class="funcoes jsOperador" value=" * "><img src="img/assets/multiplicacao.svg"></button>
+        <button class="funcoes jsApaga" onclick="apaga()"><img src="img/assets/delete.svg"></button>
         <button data-numero>7</button>
         <button data-numero>8</button>
         <button data-numero>9</button>
-        <button class="funcoes jsOperador" value=" - "><img src="img/subtracao.svg"></button>
+        <button class="funcoes jsOperador" value=" - "><img src="img/assets/subtracao.svg"></button>
         <button data-numero>4</button>
         <button data-numero>5</button>
         <button data-numero>6</button>
-        <button class="funcoes jsOperador" value=" + "><img src="img/adicao.svg"></button>
+        <button class="funcoes jsOperador" value=" + "><img src="img/assets/adicao.svg"></button>
         <button data-numero>1</button>
         <button data-numero>2</button>
         <button data-numero>3</button>
-        <button class="funcoes" onclick="resultadoFinal()"><img src="img/igual.svg"></button>
-        <button class="funcoes jsOperador" value=" " onclick="porcentagem()"><img src="img/porcentagem.svg" value="% "></button>
+        <button class="funcoes" onclick="resultadoFinal()"><img src="img/assets/igual.svg"></button>
+        <button class="funcoes jsOperador" value=" " onclick="porcentagem()"><img src="img/assets/porcentagem.svg" value="% "></button>
         <button data-numero>0</button>
         <button data-numero class="funcoes jsOperador" value="."></button>
       </div>
     </div>
   </div>
-  <!-- <div class="containerError">
-    <h1>Erro é possivel efetuar essa conta</h1>
-  </div> -->
   <script src="js/script.js"></script>
 </body>
 
