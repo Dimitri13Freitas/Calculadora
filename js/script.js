@@ -55,3 +55,4 @@ function porcentagem() {
   teste = `0.${teste} * `
   calculo.innerHTML = teste
 }
+
