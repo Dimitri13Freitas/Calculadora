@@ -32,8 +32,8 @@ function apagaTudo() {
 
 function apaga() {
   let apaga = calculo.innerHTML;
-  calculo.innerHTML = apaga.substring(0, apaga.length -1); // slice tbm funciona novideo do mano seila 8==D
-};
+  calculo.innerHTML = apaga.substring(0, apaga.length -1); 
+}
 
 // Resultado
 function resultadoFinal() {

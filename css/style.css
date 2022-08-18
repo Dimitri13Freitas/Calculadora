@@ -4,10 +4,8 @@
   padding:0;
 }
 body {
-  /* background-color: #2c2c2c !important; */
-  /* width: 100vw; */
+  width: 100vw;
   height: 100vh;
-  height:100vh ;
   background-image: url("../img/light.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -178,14 +176,10 @@ body {
 }
 .btnChangeMode.ativo::after {
   left:25px;
-
 }
 
 /* Responsivo */
 @media (max-width:500px) {
-  body {
-    /* padding:25px; */
-  }
   .btnChangeMode {
   margin:20px 20px 0 0;
   }
@@ -193,8 +187,3 @@ body {
     margin-top:30px;
   }
 }
-
-
-
-
-
