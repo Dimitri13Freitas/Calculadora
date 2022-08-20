@@ -1,8 +1,10 @@
 /* Geral */
-* {
+*,:focus {
   margin:0;
   padding:0;
+  outline: none;
 }
+
 body {
   width: 100vw;
   height: 100vh;
@@ -156,6 +158,7 @@ body {
   width: 50px;
   height: 26px;
   border-radius:15px;
+  border:none;
   cursor:pointer;
   text-align: right;
   margin:20px 70px 0 0;
