@@ -32,8 +32,11 @@ function apagaTudo() {
 
 function apaga() {
   let apaga = calculo.innerHTML;
-  calculo.innerHTML = apaga.substring(0, apaga.length -1); 
-}
+  calculo.innerHTML = apaga.slice(0, -1);
+  if(calculo.innerHTML.endsWith(' -') || calculo.innerHTML.endsWith(' +') || calculo.innerHTML.endsWith(' /') || calculo.innerHTML.endsWith(' *')) { 
+    calculo.innerHTML = apaga.slice(0, -3);
+  };
+};
 
 // Resultado
 function resultadoFinal() {
