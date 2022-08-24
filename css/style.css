@@ -294,6 +294,9 @@ body {
   .sair {
     margin:20px auto;
   }
+  .btnChangeMode {
+    margin:20px 22px 0 0;
+  }
 }
 
 /* Animações */
