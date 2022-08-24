@@ -103,3 +103,18 @@ function teclado() {
   });
 };
 teclado();
+
+function modal() {
+  const sair = document.querySelector('.sair');
+  const hoverModal = document.querySelector('.activeModal');
+  const modal = document.querySelector('.containerModal');
+  
+  hoverModal.addEventListener('click', () => {
+    modal.classList.remove('esconde')
+  });
+  
+  sair.addEventListener('click', () => {
+    modal.classList.add('esconde')
+  });
+};
+modal();

@@ -1,8 +1,8 @@
 /* Geral */
-*,:focus {
+* {
   margin:0;
   padding:0;
-  outline: none;
+  text-decoration: none;
 }
 
 body {
@@ -44,9 +44,7 @@ body {
   top:120px;
   mix-blend-mode: difference;
   letter-spacing: -0.065em;
-}
-.bgEffect::selection {
-  user-select: none;
+  z-index: -1;
 }
 
 /* Containers */
@@ -80,6 +78,7 @@ body {
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur( 40px );
   border-radius: 15px 15px 0px 0px;
+  transition:0.2s ease-in-out;
 }
 .inputCalc div {
   margin: 30px 30px 15px 30px;
@@ -95,15 +94,13 @@ body {
 }
 
 /* Operações e Numeros */
-.btnsCalc::selection {
-  user-select: none;
-}
 .btnsCalc {
   width: 100%;
   background: var(--btnsCalcBg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur( 20px );
   border-radius: 0px 0px 15px 15px;
+  transition:0.2s ease-in-out;
 }
 .btnsCalc div {
   display: grid;
@@ -162,6 +159,7 @@ body {
   text-align: right;
   margin:20px 70px 0 0;
   position: relative;
+  z-index: 20000;
 }
 .btnChangeMode::after {
   content: '';
@@ -179,16 +177,117 @@ body {
   left:25px;
 }
 
-/* Responsivo */
-@media (max-width:400px) {
-  .btnChangeMode {
-  margin:20px 20px 0 0;
+/* Modal */
+.activeModal {
+  background:var(--inputCalc);
+  width: 5px;
+  height: 26px;
+  position:absolute;
+  border-radius:0 2px 2px 0;
+  top:145px;
+  left: calc(100%);
+  cursor: pointer;
+  transition:0.2s ease-in-out;
+}
+.activeModal:hover {
+  width: 15px;
+}
+.activeModal img {
+  width:9px;
+  display:none;
+  margin:7px auto;
+}
+.activeModal:hover > img {
+  display: block;
+  animation: anima 0.2s;
+}
+
+.containerModal {
+  width:100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+.containerModal.esconde {
+  display: none;
+}
+.modal {
+  max-width: 700px;
+  width:100%;
+  height: 300px;
+  margin:145px auto;
+  border-radius:10px;
+  background: var(--btnsCalcOperadoresBg);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur( 2px );
+  transition:0.2s ease-in-out;
+  position:relative;
+  animation: modalAnima 0.2s;
+}
+.modal h1 {
+  color:var(--cor-font);
+  text-align: center;
+  padding:18px 0;
+  font-size: 1.8rem;
+}
+.modal h1 a {
+  color:black;
+  position: relative;
+  padding:3px 8px;
+  z-index: 1;
+  transition:0.3s ease-in-out;
+}
+.modal h1 span {
+  padding:3px 0px;
+  border-radius:4px;
+  background-color: var(--cor-font);
+}
+.modal h1 a:hover {
+  color:var(--cor-font);
+}
+.modal h1 a::after {
+  content:'';
+  position:absolute;
+  background-color: #141414;
+  border-radius:3px;
+  width: 0;
+  height: 100%;
+  top:0;
+  left:0;
+  transition:0.3s ease-in-out;
+  z-index: -1;
+}
+.modal h1 a:hover:after{
+  width: 100%;
+}
+.sair {
+  max-width: 250px;
+  border-radius:6px;
+  margin:50px auto;
+  padding:12px 35px;
+  background: var(--cor-font);
+  text-align: center;
+  cursor:pointer;
+}
+.sair p {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Animações */
+@keyframes anima {
+  from{
+    opacity: 0;
+  } to {
+    opacity: 1;
   }
-  .container {
-    margin:25px 50px 0 50px;
-  }
-  .bgEffect {
-    right: 120px;
-    
+}
+@keyframes modalAnima {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }to {
+    transform: scale(1.01);
+    opacity: 1;
   }
 }
