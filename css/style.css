@@ -274,6 +274,28 @@ body {
   font-weight: bold;
 }
 
+/* Responsivo */
+@media (max-width: 400px){
+  .bgEffect {
+    display:none;
+  }
+  .container {
+  margin-top:35px;
+  }
+  .modal h1 {
+    font-size: 1.2rem;
+  }
+  .modal {
+    height: 200px;
+  }
+  .sair p {
+    font-size: 1.1rem;
+  }
+  .sair {
+    margin:20px auto;
+  }
+}
+
 /* Animações */
 @keyframes anima {
   from{
